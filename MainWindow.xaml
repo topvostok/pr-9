@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pr9"
         mc:Ignorable="d"
-        Title="Воинская система" Height="450" Width="800">
+        Title="Воинская система" Height="500" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -22,9 +22,11 @@
                     Click="btnAttack_Click" Margin="5" Padding="10" Background="LightCoral"/>
         </StackPanel>
 
-        <Canvas x:Name="warriorCanvas" Grid.Row="1" Background="LightBlue" Margin="10">
-            <!-- Здесь будут отображаться воины -->
-        </Canvas>
+        <Border Grid.Row="1" Background="LightBlue" Margin="10" BorderBrush="Gray" BorderThickness="1">
+            <Canvas x:Name="warriorCanvas">
+                <!-- Здесь будут отображаться воины -->
+            </Canvas>
+        </Border>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10">
             <TextBlock x:Name="tbStatus" Text="Создайте воина для начала" 
