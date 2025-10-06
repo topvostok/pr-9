@@ -34,13 +34,9 @@ namespace pr9
 
         private void InitializeImages()
         {
-            lightWarriorImages.Add("C:/Users/student-a502/Desktop/pr9/img/l.jpg");
-            lightWarriorImages.Add("C:/Users/student-a502/Desktop/pr9/img/l2.jpg"); 
-            lightWarriorImages.Add("C:/Users/student-a502/Desktop/pr9/img/l3.jpg"); 
+            lightWarriorImages.Add("C:/Users/student-a502/Desktop/pr9/img/l.jpg"); 
 
             heavyWarriorImages.Add("C:/Users/student-a502/Desktop/pr9/img/t.jpg");
-            heavyWarriorImages.Add("C:/Users/student-a502/Desktop/pr9/img/t2.jpg"); 
-            heavyWarriorImages.Add("C:/Users/student-a502/Desktop/pr9/img/t3.jpg");
         }
 
         private void btnCreateLightWarrior_Click(object sender, RoutedEventArgs e)
@@ -167,7 +163,7 @@ namespace pr9
             {
                 string armorType = currentWarrior is LightArmorWarrior ? "легких" : "тяжелых";
                 string imageInfo = $" | Изображение: {currentImageIndex + 1}/{(currentWarrior is LightArmorWarrior ? lightWarriorImages.Count : heavyWarriorImages.Count)}";
-                tbStatus.Text = $"Воин в {armorType} доспехах | Здоровье: {currentWarrior.Health:F1} | Состояние: {(currentWarrior.Health > 0 ? "Жив" : "Мертв")}{imageInfo}";
+                tbStatus.Text = $"Воин в {armorType} доспехах | Здоровье: {currentWarrior.Health:F1} | Состояние: {(currentWarrior.Health > 0 ? "Жив" : "Мертв")}";
             }
         }
 
